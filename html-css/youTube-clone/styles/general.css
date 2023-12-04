@@ -1,0 +1,28 @@
+p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body{
+  background-color: rgb(248, 248, 248);
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 95px;
+  padding-right: 24px;
+}
+
+button,
+img,
+a{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  border-radius: 100%;
+}
