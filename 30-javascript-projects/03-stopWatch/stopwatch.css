@@ -1,0 +1,151 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #323134;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+/* Card styling */
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: #000000;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+}
+
+.card-header{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header img{
+  width: 45px;
+  height: 45px;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 100;
+  text-align: left;
+}
+
+.timer{
+  font-size: 80px;
+  margin-bottom: 20px;
+  /* reduce the thickness */
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.start-button{
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #68CE67;
+  background-color: #132914;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.start-button:hover{
+  background-color: #0e220c;
+}
+
+.start-button:active{
+  background-color: #09160A;
+  transform: scale(0.98);
+}
+
+.stop-button{
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #EB5545;
+  background-color: #2F100D;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.stop-button:hover{
+  background-color: #22080A;
+}
+
+.stop-button:active{
+  background-color: #160505;
+  transform: scale(0.98);
+}
+
+.lap-reset-button{
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.lap-reset-button:hover{
+  background-color: #1a1a1a;
+}
+
+.lap-reset-button:active{
+  background-color: #1B1B1B;
+  transform: scale(0.98);
+}
+
+.lap-reset-button:disabled{
+  background-color: #333333;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  font-size: 20px;
+  border-top: #323134 solid 0.5px;
+  padding: 8px 0 8px 0;
+
+}
+
+li .lap-time{
+  display: flex;
+}
