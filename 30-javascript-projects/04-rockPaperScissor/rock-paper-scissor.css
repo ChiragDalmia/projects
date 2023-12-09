@@ -1,0 +1,164 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #323134;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+/* Card styling */
+.card {
+  width: 90%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #4e4d4e, #171719);
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+}
+
+.card h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.move-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Icon Styles */
+.move-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.move-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Result and Moves Styles */
+.result, .moves {
+  font-size: 20px;
+  color: #61afef; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.moves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moves img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+.moves img:hover {
+  transform: scale(1.1);
+}
+
+.score {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.score div {
+  padding-top: 5px;
+}
+/* Generic Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+/* Move Button Styles */
+.move-button {
+  background-color: #1d1f22;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.move-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.move-button:active,
+.move-icon:active {
+  transform: translateY(2px);
+}
+
+/* Auto-play Button Styles */
+.auto-play-button {
+  background-color: #98c379;
+  margin: 0 15px 15px 0;
+}
+
+.auto-play-button:hover {
+  background-color: #89b06f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Reset Score Button Styles */
+.reset-score-button {
+  background-color: #e06c75;
+  margin: 0 15px 15px 0;
+
+}
+
+.reset-score-button:hover {
+  background-color: #d35f5f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Reset Confirmation Buttons (Yes/No) Styles */
+.reset-yes,
+.reset-no {
+  margin: 10px 10px;
+}
+
+.reset-yes {
+  background-color: #e06c75;
+}
+
+.reset-yes:hover {
+  background-color: #d35f5f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.reset-no {
+  background-color: #98c379;
+}
+
+.reset-no:hover {
+  background-color: #89b06f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
