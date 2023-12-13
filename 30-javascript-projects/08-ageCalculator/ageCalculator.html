@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="ageCalculator.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <h1>JavaScript 
+        <br/>
+        <span>Age Calculator</span>
+      </h1>
+      <div class="input-box">
+        <input type="date" id="date-input">
+      <button class="calculate-button">
+        Calculate
+      </button>
+      </div>
+      
+    </div>
+    <br/>
+    
+    <div class="result">
+    </div>
+  </div>
+  <script>let userInput = document.getElementById("date-input");
+    userInput.max = new Date().toISOString().split("T")[0];
+    let calculateButton = document.querySelector(".calculate-button");
+    
+    function calculateAge(){
+      let userDate = new Date(userInput.value);
+      let userYear = userDate.getFullYear();
+      let userMonth = userDate.getMonth();
+      let userDay = userDate.getDate();
+    
+      let currentDate = new Date();
+      let currentYear = currentDate.getFullYear();
+      let currentMonth = currentDate.getMonth();
+      let currentDay = currentDate.getDate();
+    
+      let yearAge = currentYear - userYear;
+      let monthAge = currentMonth - userMonth;
+      let dayAge = currentDay - userDay;
+    
+      // Adjust year and month if current month/day is less than birth month/day
+      if(monthAge < 0 || (monthAge === 0 && dayAge < 0)){
+        yearAge--;
+        monthAge = (monthAge + 12) % 12;
+      }
+    
+      // Adjust days for month length
+      if(dayAge < 0){
+        // Get the last day of the previous month
+        let previousMonth = currentMonth - 1;
+        let lastDayOfPrevMonth = new Date(currentYear, currentMonth, 0).getDate();
+    
+        // Adjust for leap year February
+        if(previousMonth === 1) { // February
+          lastDayOfPrevMonth = ((currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0) ? 29 : 28;
+        }
+    
+        dayAge += lastDayOfPrevMonth;
+        monthAge = (monthAge - 1 + 12) % 12;
+      }
+    
+      let result = document.querySelector(".result");
+      
+      result.classList.add("result-styles");
+      if (userInput.value){
+        result.innerHTML = `Your Age is <span>${yearAge}</span> years, <span>${monthAge}</span> months, and <span>${dayAge}</span> days`;
+      } else {
+        result.innerHTML = `Please enter your date of birth`;
+      }
+    }
+    
+    calculateButton.addEventListener("click", calculateAge);
+    
+  </script>
+</body>
+</html>
