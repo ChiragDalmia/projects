@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background: #323134;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.music-player {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #412f3e, #2E242F, #241d24, #1f191e);
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav .circle:active, nav .circle:active {
+  background: #4D3B4E;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+nav .circle i {
+  font-size: 25px;
+  color: #A19AA5;
+}
+
+.img-container {
+  width: 90%;
+  margin: auto;
+}
+
+.song-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.music-player .song-info {
+  text-align: left;
+  width: 100%;
+  padding: 30px 30px 0 30px;
+}
+
+.music-player .song-info h1 {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.music-player .song-info p {
+  color: #B2A0AF;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+  padding: 20px 0 0 0;
+
+}
+
+.slider-container {
+  width: 90%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.time-stamp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  color: #B2A0AF;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 90%;
+  height: 6px;
+  background: linear-gradient(90deg, #A1959D 0%, #5D525B 0%);
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#progress::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  
+  background: #A1959D;
+  cursor: pointer;
+}
+
+#progress:active::-webkit-slider-thumb, #progress:active::-moz-range-thumb {
+  background: linear-gradient(90deg, #ffffff 0%, #5D525B 0%);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls div {
+  width: 60px;
+  height: 60px;
+  margin: 0 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.controls div:active {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.controls div:active {
+  background: #5D525B;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.controls div i {
+  font-size: 40px;
+  color: #ffffff;
+  transition: font-size 0.3s ease;
+}
+
+.controls div i:active {
+  font-size: 50px;
+}
+
+
+.volumeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* put gap of 5 px */
+  gap: 15px;
+  width: 80%;
+  margin: 20px auto;
+
+}
+
+.volumeContainer i {
+  font-size: 20px;
+  color: #A1959D;
+  cursor: pointer;
+}
+
+#volumeControl {
+  -webkit-appearance: none; 
+  appearance: none; 
+  width: 80%; 
+  height: 6px;
+  background: #5D525B;
+  outline: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s ease, transform 0.3s ease; 
+}
+
+/* on moving the control button increase the height to 8px */
+
+#volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Removes default webkit styles for the thumb */
+  appearance: none; /* Removes default styles for the thumb */
+  width: 15px; /* Width of the thumb */
+  height: 15px; /* Height of the thumb */
+  background: transparent; 
+  cursor: pointer; /* Cursor changes to pointer when hovering over the thumb */
+  transition: background 0.3s ease; /* Smooth transition for the thumb's background */
+}
+
+#volumeControl::-moz-range-thumb {
+  width: 15px; /* Width of the thumb for Mozilla browsers */
+  height: 15px; /* Height of the thumb for Mozilla browsers */
+  background: #A1959D; /* Background color of the thumb for Mozilla browsers */
+  cursor: pointer; /* Cursor changes to pointer when hovering over the thumb for Mozilla browsers */
+}
