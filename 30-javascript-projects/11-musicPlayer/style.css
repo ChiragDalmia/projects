@@ -1,17 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
 .container {
   background: #323134;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   color: #ffffff;
 }
@@ -21,6 +35,7 @@
   width: 100%;
   max-width: 400px;
   min-height: 100vh;
+  background: -o-radial-gradient(center, circle, #412f3e, #2E242F, #241d24, #1f191e);
   background: radial-gradient(circle at center, #412f3e, #2E242F, #241d24, #1f191e);
 }
 
@@ -28,24 +43,37 @@ nav {
   width: 100%;
   height: 70px;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav .circle {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 
 nav .circle:active, nav .circle:active {
   background: #4D3B4E;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+          box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 nav .circle i {
@@ -61,9 +89,11 @@ nav .circle i {
 .song-img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
 .music-player .song-info {
@@ -82,10 +112,19 @@ nav .circle i {
 }
 
 .bottom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 80%;
   width: 100%;
   padding: 20px 0 0 0;
@@ -99,9 +138,15 @@ nav .circle i {
 }
 
 .time-stamp{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 0.8em;
   color: #B2A0AF;
   width: 90%;
@@ -110,15 +155,23 @@ nav .circle i {
 
 #progress {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 90%;
   height: 6px;
+  background: -webkit-gradient(linear, left top, right top, from(#A1959D), color-stop(0%, #5D525B));
+  background: -o-linear-gradient(left, #A1959D 0%, #5D525B 0%);
   background: linear-gradient(90deg, #A1959D 0%, #5D525B 0%);
   outline: none;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+          box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  -webkit-transition: background 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: background 0.3s ease, transform 0.3s ease;
   transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 #progress::-webkit-slider-thumb {
@@ -127,6 +180,7 @@ nav .circle i {
   width: 15px;
   height: 15px;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 
@@ -139,13 +193,20 @@ nav .circle i {
 }
 
 #progress:active::-webkit-slider-thumb, #progress:active::-moz-range-thumb {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(0%, #5D525B));
   background: linear-gradient(90deg, #ffffff 0%, #5D525B 0%);
 }
 
 .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .controls div {
@@ -153,26 +214,41 @@ nav .circle i {
   height: 60px;
   margin: 0 20px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: background 0.3s ease, transform 0.3s ease;
   transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .controls div:active {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .controls div:active {
   background: #5D525B;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+          box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 .controls div i {
   font-size: 40px;
   color: #ffffff;
+  -webkit-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
   transition: font-size 0.3s ease;
 }
 
@@ -182,9 +258,15 @@ nav .circle i {
 
 
 .volumeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* put gap of 5 px */
   gap: 15px;
   width: 80%;
@@ -200,15 +282,21 @@ nav .circle i {
 
 #volumeControl {
   -webkit-appearance: none; 
-  appearance: none; 
+  -moz-appearance: none; 
+       appearance: none; 
   width: 80%; 
   height: 6px;
   background: #5D525B;
   outline: none; 
   border-radius: 20px; 
   cursor: pointer; 
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+  -webkit-transition: all 0.3s ease, -webkit-transform 0.3s ease; 
+  transition: all 0.3s ease, -webkit-transform 0.3s ease; 
+  -o-transition: all 0.3s ease, transform 0.3s ease; 
   transition: all 0.3s ease, transform 0.3s ease; 
+  transition: all 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; 
 }
 
 /* on moving the control button increase the height to 8px */
@@ -220,6 +308,7 @@ nav .circle i {
   height: 15px; /* Height of the thumb */
   background: transparent; 
   cursor: pointer; /* Cursor changes to pointer when hovering over the thumb */
+  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease; /* Smooth transition for the thumb's background */
 }
 
