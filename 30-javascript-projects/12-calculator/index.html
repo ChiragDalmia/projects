@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator App</title>
+  <script src="https://kit.fontawesome.com/f7f8931e93.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <form action="">
+        <div class="display">
+          <input type="text" name="display" id="display" readonly>
+        </div>
+        <div>
+          <input type="button" value="AC" id="AC" onclick="clearDisplay()">
+          <input type="button" value="+/-" id="plus-minus" onclick="toggleSign()">
+          <input type="button" value="%" id="percent" onclick="percentage()">
+          <button type="button" id="divide" class="operator" onclick="appendToDisplay('/')">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+        </div>
+        <div>
+          <input type="button" value="7" class="num" onclick="appendToDisplay('7')">
+          <input type="button" value="8" class="num" onclick="appendToDisplay('8')">
+          <input type="button" value="9" class="num" onclick="appendToDisplay('9')">
+          <button type="button" id="multiply" class="operator" onclick="appendToDisplay('*')">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div>
+          <input type="button" value="4" class="num" onclick="appendToDisplay('4')">
+          <input type="button" value="5" class="num" onclick="appendToDisplay('5')">
+          <input type="button" value="6" class="num" onclick="appendToDisplay('6')">
+          <button type="button" id="minus" class="operator" onclick="appendToDisplay('-')">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+        <div>
+          <input type="button" value="1" class="num" onclick="appendToDisplay('1')">
+          <input type="button" value="2" class="num" onclick="appendToDisplay('2')">
+          <input type="button" value="3" class="num" onclick="appendToDisplay('3')">
+          <button type="button" id="plus" class="operator" onclick="appendToDisplay('+')">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div>
+          <input type="button" value="0" class="num" onclick="appendToDisplay('0')">
+          <input type="button" value="." class="num" onclick="appendToDisplay('.')">
+          <button type="button" id="equals" class="equals" onclick="calculateResult()">
+            <i class="fa-solid fa-equals"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    let display = document.getElementById('display');
+    let AC = document.getElementById('AC');
+    function appendToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function toggleSign() {
+
+      display.value = display.value.charAt(0) === '-' ? display.value.slice(1) : '-' + display.value;
+    }
+
+    function percentage() {
+
+      display.value = (parseFloat(display.value) / 100).toString();
+    }
+
+    function deleteLastChar() {
+      display.value = display.value.substring(0, display.value.length - 1);
+    }
+    function calculateResult() {
+      try {
+
+        display.value = eval(display.value).toString();
+      } catch (e) {
+        display.value = 'Error';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize the calculator
+      clearDisplay();
+
+      // Function to update the AC/C button value
+      function updateACButton() {
+        AC.value = display.value === '' ? 'AC' : 'C';
+      }
+
+      // Update AC button dynamically
+      display.addEventListener('input', updateACButton);
+
+      // Event listener for the AC/C button
+      AC.addEventListener('click', () => {
+        if (AC.value === 'C') {
+          deleteLastChar();
+        } else {
+          clearDisplay();
+        }
+        updateACButton(); // Update button value after click action
+      });
+
+      // Initialize AC button value
+      updateACButton();
+    });
+
+
+
+  </script>
+</body>
+
+</html>
