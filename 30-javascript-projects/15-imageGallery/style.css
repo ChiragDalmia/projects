@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #191919;
+}
+
+.gallery{
+  width: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.gallery div{
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  padding: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.gallery div img{
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+
+.gallery-wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10% auto;
+}
+
+#backBtn, #nextBtn{
+  font-size: 50px;
+  cursor: pointer;
+  margin: 20px;
+  color: #fff;
+}
+
+
+.gallery div img:hover{
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+  border-radius: 0;
+}
+.msg{
+  display: none;
+}
+
+/* for iphones */
+@media screen and (max-width: 450px){
+  .gallery div {
+
+    height: auto; /* Adjust height as needed */
+  }
+  .gallery div img {
+    width: 100%;
+    height: auto; /* Changed to 'auto' for maintaining aspect ratio */
+    -o-object-fit: cover;
+       object-fit: cover; /* Ensures the images cover the area nicely */
+  }
+  .gallery-wrap {
+    margin: 50% auto; /* Reduced from 50% to 25% for better positioning */
+  }
+  #backBtn, #nextBtn {
+    font-size: 30px; /* Reduced from 50px to 30px for better visibility */
+    display: none;
+  }
+
+  .msg {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+  }
+}
