@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(to bottom right, #6a3093, #a044ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom right, #6a3093, #a044ff);
+    align-items: center;
+    justify-content: center;
+}
+
+.container form{
+    width: 90%;
+    max-width: 500px;
+    padding: 30px 30px 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.plane-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: left;
+
+    flex-direction: column;
+    margin: 10px 0;
+    position: relative;
+}
+.input-group label{
+    flex-basis: 28%;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0 20px 5px;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 20px;
+}
+::placeholder{
+    font-size: 20px;
+}
+
+form button{
+    background: #c670ff;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto 10px;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+form button:active{
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.error{
+    color: red;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.submitted{
+    color: green;
+    margin-top: 5px;
+    font-weight: 700;
+}

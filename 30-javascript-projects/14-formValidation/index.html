@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f7f8931e93.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <div class="plane-container"><i class="fas fa-paper-plane fa-bounce"></i></div>
+
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+        <span id="name-error" class="error">
+
+        </span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="123 456 7890">
+        <span id="phone-error" class="error">
+        </span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="example@email.com">
+        <span id="email-error" class="error">
+        </span>
+      </div>
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="1" placeholder="Enter your message"></textarea>
+        <span id="message-error" class="error">
+
+        </span>
+      </div>
+
+      <button>Submit</button>
+      <span id="submit-error" class="error">
+        <!-- <i class="fas fa-exclamation-circle"></i>
+        Something went wrong -->
+      </span>
+      <span id="success" class="submitted">
+        <!-- <i class="fas fa-check-circle"></i>
+        Your message has been sent successfully -->
+      </span>
+
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+
+
+
+
+  </script>
+</body>
+
+</html>
