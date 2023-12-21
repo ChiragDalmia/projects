@@ -1,0 +1,173 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: -o-linear-gradient(315deg, #71b7e6, #9b59b6);
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 20px;
+  height: 100vh;
+}
+
+.buttons button{
+  height: 50px;
+  width: 150px;
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.buttons button:hover{
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+          box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+/* no hover on screens smaller than ipad */
+@media (max-width: 768px){
+  .buttons button:hover{
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+.buttons button:active{
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#toastBox{
+  position: absolute;
+  bottom: 55px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.toast{
+  width: 300px;
+  height: 80px;
+  background: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  margin: 15px 0;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.3);
+          box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: moveLeft 0.5s linear forwards;
+          animation: moveLeft 0.5s linear forwards;
+}
+@-webkit-keyframes moveLeft{
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moveLeft{
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.toast i{
+  margin: 0 20px;
+  font-size: 35px;
+  color: green;
+}
+
+.toast.error i{
+  color: red;
+}
+
+.toast.invalid i{
+  color: orange;
+}
+
+.toast::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  height: 5px;
+  background: green;
+  -webkit-animation: anim 5s linear forwards;
+          animation: anim 5s linear forwards;
+}
+.toast.error::after{
+  background: red;
+}
+.toast.invalid::after{
+  background: orange;
+}
+@-webkit-keyframes anim{
+  
+  100%{
+    width: 0;
+  }
+}
+@keyframes anim{
+  
+  100%{
+    width: 0;
+  }
+}
