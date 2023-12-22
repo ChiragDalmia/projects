@@ -1,0 +1,98 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: rgb(31, 31, 31);
+}
+
+.container{
+  width:100%;
+  height:100vh;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.btn{
+  border-radius: 30px;
+  width: 160px !important;
+  font-size: 24px !important;
+}
+#submitBtn.active{
+  /* move a little down */
+  margin: 350px 0 0 0;
+}
+.popup{
+  width: 350px;
+  background: rgb(41, 41, 41);
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.popup.active{
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+  
+}
+.popup button{
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100% !important;
+  bottom: 0px;
+  background-color: rgb(250, 201, 33);
+}
+.popup button:hover {
+  background-color: rgb(250, 201, 33);
+  color: white;
+}
+
+.popup i{
+  position: absolute;
+  top: -25px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  left: 42%;
+  color: rgb(250, 201, 33);
+  font-size: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  animation: animate 1s linear ;
+}
+
+@keyframes animate{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.popup h2{
+  font-size: 38px;
+  margin: 30px 0 10px;
+
+}
+
+.popup p{
+  font-size: 20px;
+}
