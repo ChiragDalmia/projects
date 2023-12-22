@@ -59,9 +59,11 @@ body{
 }
 .popup button:hover {
   background-color: rgb(250, 201, 33);
+  color: white !important;
+}
+.popup .ui-btn:hover span, .ui-btn:focus span {
   color: white;
 }
-
 .popup i{
   position: absolute;
   top: -25px;
