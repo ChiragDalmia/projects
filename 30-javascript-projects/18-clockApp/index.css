@@ -13,7 +13,7 @@
 
 body {
   /* Corrected Gradient Background */
-  background: linear-gradient(135deg, #434343, #000000);
+  background: rgb(86, 86, 86);
 }
 
 .container{
