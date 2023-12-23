@@ -12,15 +12,10 @@
 
 
 body {
-  background: linear-gradient(135deg, #434343, #000000);
+  /* Corrected Gradient Background */
+  background: rgb(59, 56, 56);
 }
 
-@supports (padding-top: env(safe-area-inset-top)) {
-  body {
-      /* Adjust padding or other properties if needed */
-      padding-top: env(safe-area-inset-top);
-  }
-}
 .container{
   /* Flexbox Layout */
   display: flex;
