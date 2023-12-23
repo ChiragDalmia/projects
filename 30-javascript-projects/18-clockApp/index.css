@@ -10,27 +10,21 @@
   padding: 0;
 }
 
+
 body {
-  background: #000000;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-background: -o-linear-gradient(315deg, #434343, #000000);
-background: linear-gradient(135deg, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Corrected Gradient Background */
+  background: linear-gradient(135deg, #434343, #000000);
 
-
-  display: -webkit-box;
-
-
-  display: -ms-flexbox;
-
-
+  /* Flexbox Layout */
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+
+  /* Full Viewport Height */
   height: 100vh;
   width: 100%;
+  
+  /* Preventing Overflow */
   overflow: hidden;
 }
 
