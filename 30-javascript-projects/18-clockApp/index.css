@@ -18,6 +18,7 @@ body {
 
 .container{
   /* Flexbox Layout */
+  background: linear-gradient(135deg, #434343, #000000);
   display: flex;
   justify-content: center;
   align-items: center;
