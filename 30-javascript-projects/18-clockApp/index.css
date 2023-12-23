@@ -14,7 +14,9 @@
 body {
   /* Corrected Gradient Background */
   background: linear-gradient(135deg, #434343, #000000);
+}
 
+.container{
   /* Flexbox Layout */
   display: flex;
   justify-content: center;
