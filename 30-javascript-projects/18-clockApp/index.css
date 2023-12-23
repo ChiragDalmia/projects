@@ -29,7 +29,8 @@ background: linear-gradient(135deg, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -37,6 +38,10 @@ background: linear-gradient(135deg, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
   padding: 25px;
   border-radius: 30px;
   background-color: black;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 .clock{
   width: 300px;
@@ -44,7 +49,44 @@ background: linear-gradient(135deg, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   position: relative;
+}
 
+/* media query for width smaller than 300px, 325px,350px and 375px */
+@media screen and (max-width: 300px) {
+  .clock-container{
+    padding: 10px;
+  }
+  .clock{
+    width: 220px;
+    height: 220px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 325px) {
+  .clock-container{
+    padding: 10px;
+  }
+  .clock{
+    width: 240px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 325px) and (max-width: 350px) {
+  .clock-container{
+    padding: 10px;
+  }
+  .clock{
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 375px) {
+  .clock-container{
+    padding: 10px;
+  }
+  .clock{
+    width: 270px;
+    height: 270px;
+  }
 }
 
 .clock .number{
