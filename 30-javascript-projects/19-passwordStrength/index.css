@@ -16,6 +16,9 @@ body{
   justify-content: center;
   align-items: center;
   background: #201f21;
+  /* no scrolling */
+  overflow: hidden;
+
 }
 
 .input-box{
