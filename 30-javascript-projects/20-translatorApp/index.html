@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f7f8931e93.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="text-input">
+        <textarea class="from-text" placeholder="Enter Text"></textarea>
+        <textarea class="to-text" placeholder="Translated Text" readonly disabled></textarea>
+      </div>
+      <ul class="controls">
+        <li class="row from">
+          <div class="icons">
+            <i id="from" class="fas fa-volume-up"></i>
+            <i id="from" class="fas fa-copy copyBtn"></i>
+          </div>
+          <select>
+            <!--  countries-->
+          </select>
+        </li>
+        <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+        <li class="row to">
+          <select>
+            <!--  countries-->
+          </select>
+          <div class="icons">
+            <i id="to" class="fas fa-volume-up"></i>
+            <i id="to" class="fas fa-copy copyBtn"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <button>Translate Text</button>
+    </div>
+  </div>
+  <script src="js/countries.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
