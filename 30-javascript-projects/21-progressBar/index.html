@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="skill">
+    <div class="outer">
+      <div class="inner">
+        <div id="number">
+          0%
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="200px">
+      <defs>
+        <linearGradient id="GradientColor">
+          <stop offset="0%" stop-color="#6BEC68" /> <!-- very light green -->
+          <stop offset="100%" stop-color="#1b5e20" /> <!-- very dark green -->
+        </linearGradient>
+      </defs>
+
+
+      <circle cx="100" cy="100" r="90" stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

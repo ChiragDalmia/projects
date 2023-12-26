@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* background-color: #1b1b1b; */
+  position: relative;
+}
+
+.outer{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  padding: 10%;
+  animation: anim-box-shadow 2s linear forwards;
+  transition: box-shadow 2s ease-in-out;
+}
+
+@keyframes anim-box-shadow {
+  0% {
+    box-shadow: 
+    0px 0px 0px 0px rgba(255, 255, 255, 0.15), 
+    0px 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+  70% {
+    box-shadow: 
+      6px 6px 10px -1px rgba(255, 255, 255, 0.15), 
+      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 
+      0px 0px 0px 0px rgba(255, 255, 255, 0.15), 
+      0px 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+}
+
+
+
+.inner{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#number{
+  font-weight: 500;
+  font-size: 40px;
+  color: #fff;
+}
+
+circle{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 570;
+  stroke-dashoffset: 570;
+  animation: anim 2s linear forwards;
+
+}
+@keyframes anim{
+  100%{
+    stroke-dashoffset: 25;
+    /* display: none; */
+  }
+}
+
+svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* rotate left 90 deg */
+  transform: rotate(-90deg);
+}
