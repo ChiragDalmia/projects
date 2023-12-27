@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="outer-circle">
+    <div class="inner-circle">
+      <div class="timer">
+        <div class="time">
+          <span class="hours">
+            <input type="number" class="hours-input js-hours-input" placeholder="00" />
+          </span>
+          <span>:</span>
+          <span class="minutes">
+            <input type="number" class="minutes-input js-minutes-input" placeholder="00" />
+          </span>
+          <span>:</span>
+          <span class="seconds">
+            <input type="number" class="seconds-input js-seconds-input" placeholder="00" />
+          </span>
+
+
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="330px" height="330px">
+      <circle cx="165" cy="165" r="157" stroke-dasharray="986" stroke-dashoffset="986" stroke-linecap="Round"
+        data-circle />
+
+    </svg>
+  </div>
+
+
+  <div class="buttons">
+    <button class="cancel-button js-cancel-button">
+      Cancel
+    </button>
+    <button class="start-button js-start-stop-button">
+      Start
+    </button>
+  </div>
+  <script src="/script.js"></script>
+  <script>
+
+
+  </script>
+</body>
+
+</html>
