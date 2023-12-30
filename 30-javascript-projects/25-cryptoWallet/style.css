@@ -1,0 +1,248 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #000000;
+  color: white;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(images/herobg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* darken the image */
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.7);
+
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeOut{
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes zoomIn{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+nav .logo{
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  /* remove image background */
+  mix-blend-mode: screen;
+
+}
+
+nav ul{
+  flex: 1;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+@media (max-width: 700px){
+  nav ul li{
+    margin-left: 20px;
+  }
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+nav  .btn{
+  border: 1px solid white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.content{
+  width: 100%;
+  margin-top: 8%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content h1{
+  /* resposive font size */
+  font-size: 80px;
+  text-align: center;
+  /*give 3d effect with shadow and everything*/
+  
+
+  
+}
+
+.content h1 span:nth-child(1){
+  color: #e3e31b;
+  transition: all 0.1s ease-in-out;
+}
+
+.content h1 span:nth-child(1):hover{
+  text-shadow: 0 0 10px #b4b42d,
+                0 0 20px #b4b42d,
+                0 0 40px #b4b42d;
+               
+}
+
+.content h1 span:nth-child(2){
+  color: #d43b19;
+  transition: all 0.1s ease-in-out;
+}
+
+.content h1 span:nth-child(2):hover{
+  text-shadow: 0 0 10px #b42d2d,
+                0 0 20px #b42d2d,
+                0 0 40px #b42d2d;
+}
+
+.content p{
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content .btn{
+  margin-top: 20px;
+  display: inline-block;
+  background: #ff960b;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.coin-list{
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+
+}
+
+/* in coin list from display none to display flex  add animation*/
+
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.coin{
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid #ff960b;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.coin:hover{
+  background: #000000;
+}
+
+.coin div h3{
+  color: #e3e31b;
+  margin-bottom: 5px;
+}
+
+.coin-list .coin img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 500px){
+  nav ul li{
+    margin-left: 10px;
+  }
+  .content h1{
+    font-size: 50px;
+  }
+
+  .coin {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px){
+  nav ul li{
+    display: none;
+  }
+}
+
+@media (max-width: 300px){
+  .content h1{
+    font-size: 30px;
+  }
+  .coin {
+    font-size: 15px;
+  }
+  
+}

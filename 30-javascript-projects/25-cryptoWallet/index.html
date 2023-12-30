@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto website design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <img src="images/logo.png" class="logo">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <a href="#" class="btn">EN</a>
+    </nav>
+
+    <div class="content">
+      <h1>
+        <span>Buy</span> and
+        <span>Sell</span>
+        Crypto
+      </h1>
+      <p> World's Most Trusted Crypto Exchange</p>
+      <a href="#" class="btn js-btn">Get Started</a>
+    </div>
+
+    <div class="coin-list">
+      <div class="coin">
+        <img src="images/bitcoin.png" alt="">
+        <div>
+          <h3>$00</h3>
+          <p>Bitcoin</p>
+        </div>
+      </div>
+      <div class="coin">
+        <img src="images/ethereum.png" alt="">
+        <div>
+          <h3>$00</h3>
+          <p>Ethereum</p>
+        </div>
+      </div>
+      <div class="coin">
+        <img src="images/tether.png" alt="">
+        <div>
+          <h3>$00</h3>
+          <p>Tether</p>
+        </div>
+      </div>
+      <div class="coin">
+        <img src="images/cardano.png" alt="">
+        <div>
+          <h3>$00</h3>
+          <p>Cardano</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // price api
+    const coinList = document.querySelector('.coin-list');
+    const coins = document.querySelectorAll('.coin');
+
+    const api = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ctether%2Cethereum%2Ccardano&vs_currencies=usd`;
+
+    const btn = document.querySelector('.js-btn');
+    const container = document.querySelector('.container');
+
+    coinList.style.display = 'none';
+    btn.addEventListener('click', () => {
+      container.style.animation = 'zoomIn 1s ease-in-out forwards';
+
+
+      coinList.style.display = 'flex';
+
+    });
+
+    fetch(api)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        coins.forEach(coin => {
+          const coinName = coin.querySelector('p').textContent.toLowerCase();
+          const priceElement = coin.querySelector('h3');
+
+          if (data[coinName]) {
+            priceElement.innerHTML = `$${data[coinName].usd.toFixed(2)}`;
+          } else {
+            priceElement.innerHTML = 'Not available';
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Fetch error:', err);
+        coins.forEach(coin => {
+          const priceElement = coin.querySelector('h3');
+          priceElement.innerHTML = 'Error fetching price';
+        });
+      });
+  </script>
+</body>
+
+</html>
