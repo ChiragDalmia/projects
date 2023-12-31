@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skying Jack</title>
+  <script src="https://kit.fontawesome.com/f7f8931e93.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="button.css">
+</head>
+
+
+<body>
+  <button class="btn start-btn" type="button">
+    <strong>START</strong>
+    <div id="container-stars">
+      <div id="stars"></div>
+    </div>
+
+    <div id="glow">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </button>
+
+  <div id="box" onclick="jump()">
+    <div id="score">Score:0</div>
+
+    <div id="character"><i class="fa-solid fa-person-skiing"></i></div>
+    <div id="block"><i class="fa-solid fa-bowling-ball"></i></div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
