@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Permanent Marker", cursive;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background: #e8e8e8;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.container h1{
+  padding: 20px;
+}
+.grid-container{
+  height: 339px;
+  width: 339px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 113px;
+  height: 113px;
+  border-left: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  border-radius: -5px;
+  font-size: 60px;
+}
+
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7){
+  border-left: none;
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9){
+  border-bottom: none;
+}
+
+#restart-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
