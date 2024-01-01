@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Comic Neue', cursive;
+font-family: 'Nunito', sans-serif;
+font-weight: 700;
 }
 
 body{
