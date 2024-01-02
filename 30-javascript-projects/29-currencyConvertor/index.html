@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/f7f8931e93.js" crossorigin="anonymous"></script>
+  <script src="./country-list.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Currency Converter</h1>
+
+    <div class="drop-list">
+      <div class="from">
+        <p>From</p>
+        <div class="select-box">
+          <select>
+          </select>
+        </div>
+      </div>
+      <div class="swap-icon"><i class="fa-solid fa-right-left"></i></div>
+      <div class="to">
+        <p>To</p>
+        <div class="select-box">
+          <select>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="inputGroup">
+      <input type="number" required="" autocomplete="off" value="" id="from-amount">
+      <label id="from-label">Enter Amount in USD</label>
+    </div>
+
+    <div class="inputGroup">
+      <input type="number" required="" autocomplete="off" value="" id="to-amount">
+      <label id="to-label">Enter Amount in INR</label>
+    </div>
+  </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>

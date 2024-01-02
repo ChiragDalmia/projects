@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: #b8c0ff;
+}
+
+h1 {
+  font-size: 25px;
+  background: linear-gradient(185deg, #e7c6ff, #b8c0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background: #f7f7f7; /* kept the same for readability */
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+
+.drop-list {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 40px 0;
+}
+
+.drop-list .swap-icon {
+  font-size: 20px;
+}
+
+.drop-list .from select, .drop-list .to select {
+  background: #84a2e4;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+option {
+  background-color: #b8c0ff; /* New color for options */
+  color: #fff; 
+}
+
+.drop-list .from select::-webkit-scrollbar, .drop-list .to select::-webkit-scrollbar {
+  width: 4px;
+}
+
+.drop-list .from select::-webkit-scrollbar-track, .drop-list .to select::-webkit-scrollbar-track {
+  background: white;
+}
+
+.drop-list .from select::-webkit-scrollbar-thumb, .drop-list .to select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid white;
+}
+
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1.1em 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0;
+  background-color: #f7f7f7; /* kept the same for readability */
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: #e7c6ff; /* New border color on focus/valid */
+}
+
+.inputGroup label.label-focused {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0;
+  background-color: #f7f7f7; /* kept the same for readability */
+}
