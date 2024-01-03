@@ -13,6 +13,7 @@ let fromLabel = document.getElementById("from-label"),
 
 const swapCurrency = document.querySelector(".swap-icon");
 
+
 function updateLabel(){
   fromLabel.textContent = `Enter Amount in ${fromCurrency.value}`;
   toLabel.textContent = `Enter Amount in ${toCurrency.value}`;
