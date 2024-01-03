@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="loan-calculator">
+    <div class="top">
+      <h2>Loan Calculator</h2>
+      <form action="#">
+        <div class="group">
+          <div class="title">Amount</div>
+          <input type="number" class="loan-amount" placeholder="Enter Amount" />
+        </div>
+
+        <div class="group">
+          <div class="title">Interest Rate</div>
+          <input type="number" class="interest-rate" placeholder="Enter Interest Rate" />
+        </div>
+
+        <div class="group">
+          <div class="title">Tenure (in months)</div>
+          <input type="number" class="loan-tenure" placeholder="Enter Tenure" />
+        </div>
+      </form>
+    </div>
+
+    <div class="validate-input-msg"></div>
+    <div class="result">
+      <div class="left">
+        <span class="answers">
+          <div class="loan-emi">
+            <h3>Loan EMI</h3>
+            <div class="value emi-value"></div>
+          </div>
+
+          <div class="total-interest">
+            <h3>Total Interest Payable</h3>
+            <div class="value interest-value"></div>
+          </div>
+
+          <div class="total-amount">
+            <h3>Total Amount</h3>
+            <div class="value total-value"></div>
+          </div>
+        </span>
+        <button class="calculate-btn">Calculate</button>
+      </div>
+
+      <div class="right">
+        <canvas id="myChart" width="0" height="0"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/chart.js"></script>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
