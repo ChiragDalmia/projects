@@ -3,7 +3,7 @@
   "builds": [
     { "src": "30-javascript-projects/**/*", "use": "@vercel/static" },
     { "src": "html-css/youTube-clone/**/*", "use": "@vercel/static" },
-    { "src": "not-a-raccoon/package.json", "use": "@vercel/create-react-app" }
+    { "src": "not-a-raccoon/package.json", "use": "@vercel/node" }
   ],
   "routes": [
     {
