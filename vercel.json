@@ -12,7 +12,7 @@
     {
       "src": "not-a-raccoon/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": { "distDir": "not-a-raccoon/build" }
     }
   ],
   "routes": [
