@@ -11,8 +11,7 @@
     },
     {
       "src": "not-a-raccoon/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "use": "@vercel/react"
     }
   ],
   "routes": [
@@ -25,13 +24,8 @@
       "dest": "/html-css/youTube-clone/$1"
     },
     {
-      "src": "/not-a-raccoon/static/(.*)",
-      "dest": "/not-a-raccoon/static/$1"
-    },
-    {
       "src": "/not-a-raccoon/(.*)",
-      "headers": { "cache-control": "s-maxage=0" },
-      "dest": "/not-a-raccoon/index.html"
+      "dest": "/not-a-raccoon/$1"
     },
     {
       "handle": "filesystem"
