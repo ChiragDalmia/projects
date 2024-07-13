@@ -1,9 +1,18 @@
 {
   "version": 2,
   "builds": [
-    { "src": "30-javascript-projects/**/*", "use": "@vercel/static" },
-    { "src": "html-css/youTube-clone/**/*", "use": "@vercel/static" },
-    { "src": "not-a-raccoon/package.json", "use": "@vercel/react" }
+    {
+      "src": "30-javascript-projects/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "html-css/youTube-clone/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "not-a-raccoon/package.json",
+      "use": "@vercel/cra-build"
+    }
   ],
   "routes": [
     {
@@ -15,15 +24,15 @@
       "dest": "/html-css/youTube-clone/$1"
     },
     {
-      "src": "/not-a-raccoon/(.*)",
-      "dest": "/not-a-raccoon/$1"
-    },
-    {
-      "handle": "filesystem"
+      "src": "/not-a-raccoon/static/(.*)",
+      "dest": "/not-a-raccoon/static/$1"
     },
     {
       "src": "/not-a-raccoon/(.*)",
       "dest": "/not-a-raccoon/index.html"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
