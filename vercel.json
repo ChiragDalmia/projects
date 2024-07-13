@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd not-a-raccoon && npm run build",
+  "outputDirectory": "not-a-raccoon/build",
+  "installCommand": "cd not-a-raccoon && npm install",
+  "rewrites": [
+    { "source": "/not-a-raccoon/(.*)", "destination": "/not-a-raccoon/$1" }
+  ]
+}
