@@ -15,6 +15,7 @@
   "scripts": {
     "start": "set DISABLE_ESLINT_PLUGIN=true && react-scripts start",
     "build": "react-scripts build",
+    "vercel-build": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
