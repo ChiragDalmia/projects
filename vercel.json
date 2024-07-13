@@ -11,7 +11,8 @@
     },
     {
       "src": "not-a-raccoon/package.json",
-      "use": "@vercel/cra-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
@@ -29,6 +30,7 @@
     },
     {
       "src": "/not-a-raccoon/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
       "dest": "/not-a-raccoon/index.html"
     },
     {
