@@ -7,10 +7,7 @@ let score = 0;
 let gameRunning = false;
 
 startBtn.addEventListener("click", () => {
-  block.style.animation = "move 1.5s linear infinite";
-  startBtn.style.display = "none";
-  score = 0;
-  gameRunning = true;
+ startGame()
 });
 
 const jump = () => {
@@ -37,6 +34,12 @@ let checkHit = setInterval(() => {
   }
 }, 10);
 
+function startGame(){
+  block.style.animation = "move 1.5s linear infinite";
+  startBtn.style.display = "none";
+  score = 0;
+  gameRunning = true;
+}
 function gameOver() {
   block.style.animation = "none";
   startBtn.style.display = "block";
@@ -56,3 +59,12 @@ function isColliding(rect1, rect2) {
            rect1.bottom < rect2.top ||
            rect1.top > rect2.bottom);
 }
+
+
+document.addEventListener("keydown",(e)=>{
+  if (!gameRunning){
+    startGame();
+  } else{
+    jump();
+  }
+})
