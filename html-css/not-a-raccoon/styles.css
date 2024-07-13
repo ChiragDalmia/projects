@@ -1,0 +1,68 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.App-header img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.App-header .spline-container {
+  width: 100%;
+  max-width: 1200px; /* Increased from 800px */
+  aspect-ratio: 16 / 9;
+}
+
+.App-header .spline-container spline-viewer {
+  width: 100%;
+  height: 100%;
+  min-height: 600px; /* Added minimum height */
+}
+
+@media (min-width: 768px) {
+  .App-header {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch; /* Changed to stretch */
+  }
+
+  .App-header img {
+    max-width: 35%; /* Decreased from 40% */
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .App-header .spline-container {
+    max-width: 60%; /* Increased from 50% */
+    height: 80vh; /* Set height to 80% of viewport height */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header img {
+    max-width: 80%;
+  }
+
+  .App-header .spline-container {
+    height: 50vh; /* Set height to 50% of viewport height for small screens */
+  }
+}
