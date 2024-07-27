@@ -5,14 +5,14 @@
   box-sizing: border-box;
 }
 
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #9b59b6);
   padding: 10px;
 }
 
-.todo-app{
+.todo-app {
   width: 100%;
   max-width: 540px;
   background: #f3f2f2;
@@ -21,47 +21,47 @@
   margin: 100px auto 20px;
 }
 
-.todo-app h2{
+.todo-app h2 {
   color: #002765;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.todo-app h2 img{
+.todo-app h2 img {
   width: 30px;
   margin-left: 10px;
 }
 
-.row{
+.row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
-#input-box{
+#input-box {
   flex: 1;
   outline: none;
   border: none;
   background: #eaeaeb;
   padding: 16px 15px;
-  border-radius: 30px;  
+  border-radius: 30px;
   font-size: 15px;
 }
 
-#input-date{
+#input-date {
   flex: 1;
   outline: none;
   border: none;
   background: #eaeaeb;
   padding: 16px 15px;
-  border-radius: 30px; 
-  margin-left: 10px; 
+  border-radius: 30px;
+  margin-left: 10px;
   font-size: 15px;
 }
 
-#add-btn{
+#add-btn {
   flex: 0.5;
   outline: none;
   border: none;
@@ -76,24 +76,24 @@
 
 
 #input-box:focus,
-#input-date:focus{
+#input-date:focus {
   background: #dcdcdc;
 }
 
 #input-box::placeholder,
-#input-date::placeholder{
+#input-date::placeholder {
   color: #636363;
 }
 
-#add-btn:hover{
+#add-btn:hover {
   background: linear-gradient(135deg, #04183e, #3f174e);
 }
 
-#add-btn:active{
+#add-btn:active {
   transform: scale(0.98);
 }
 
-ul li{
+ul li {
   list-style: none;
   font-size: 17px;
   padding: 12px 8px 12px 50px;
@@ -105,7 +105,7 @@ ul li{
   align-items: center;
 }
 
-ul li::before{
+ul li::before {
   content: '';
   position: absolute;
   width: 28px;
@@ -119,35 +119,42 @@ ul li::before{
   border-radius: 50%;
 }
 
-ul li.checked{
+ul li.checked {
   color: #555;
   text-decoration: line-through;
 }
+
 ul li.checked::before {
   content: '';
   position: absolute;
   width: 28px;
   height: 28px;
-  background: linear-gradient(135deg, #00297a, #912db8); /* Actual background color */
+  background: linear-gradient(135deg, #00297a, #912db8);
+  /* Actual background color */
   border-radius: 50%;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
+
 ul li.checked::after {
   content: '';
   position: absolute;
-  width: 24px; /* Increased width */
-  height: 24px; /* Increased height */
+  width: 24px;
+  /* Increased width */
+  height: 24px;
+  /* Increased height */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M4 12l3 3L14 7"/></svg>');
   background-size: cover;
   background-position: center;
-  top: 11px; /* Adjusted position */
-  left: 15px; /* Adjusted position */
+  top: 11px;
+  /* Adjusted position */
+  left: 15px;
+  /* Adjusted position */
 }
 
 
-.list-item-delete{
+.list-item-delete {
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -164,15 +171,15 @@ ul li.checked::after {
   justify-content: center;
 }
 
-.list-item-delete:hover{
+.list-item-delete:hover {
   background: #dcdcdc;
 }
 
-.list-item-delete img{
+.list-item-delete img {
   width: 20px;
 }
 
-.list-item-delete:active{
+.list-item-delete:active {
   transform: scale(0.90);
   top: 15%;
 }
