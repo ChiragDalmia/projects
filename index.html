@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Projects Showcase</title>
+  <style>
+    :root {
+      --background-color: #000000;
+      --card-background: #111111;
+      --text-color: #ffffff;
+      --primary-color: #0077be;
+      --secondary-color: #00a8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-category {
+      background: var(--card-background);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 1rem;
+      border-radius: 10px;
+      background: var(--card-background);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    a:hover {
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-category {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .project-category:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .project-category:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div className="container">
+    <h1>My Web Projects Showcase</h1>
+    <div className="projects-grid">
+      <div className="project-category">
+        <h2>HTML/CSS Projects</h2>
+        <ul>
+          <li><a href="html-css/not-a-raccoon/index.html">Not a Raccoon</a></li>
+          <li><a href="html-css/youTube-clone/index.html">YouTube Clone</a></li>
+        </ul>
+      </div>
+      <div className="project-category">
+        <h2>JavaScript Projects</h2>
+        <ul>
+          <li><a href="javascript-projects/01-weatherApp/index.html">Weather App</a></li>
+          <li><a href="javascript-projects/02-todoList/index.html">Todo List</a></li>
+          <li><a href="javascript-projects/03-stopWatch/index.html">Stopwatch</a></li>
+          <li><a href="javascript-projects/04-rockPaperScissor/index.html">Rock Paper Scissors</a></li>
+          <li><a href="javascript-projects/05-quizApp/index.html">Quiz App</a></li>
+          <li><a href="javascript-projects/06-passwordGenerator/index.html">Password Generator</a></li>
+          <li><a href="javascript-projects/07-notesApp/index.html">Notes App</a></li>
+          <li><a href="javascript-projects/08-ageCalculator/index.html">Age Calculator</a></li>
+          <li><a href="javascript-projects/09-quoteGenerator/index.html">Quote Generator</a></li>
+          <li><a href="javascript-projects/10-qrGenerator/index.html">QR Generator</a></li>
+          <li><a href="javascript-projects/11-musicPlayer/index.html">Music Player</a></li>
+          <li><a href="javascript-projects/12-calculator/index.html">Calculator</a></li>
+          <li><a href="javascript-projects/13-togglePasssword/index.html">Toggle Password</a></li>
+          <li><a href="javascript-projects/14-formValidation/index.html">Form Validation</a></li>
+          <li><a href="javascript-projects/15-imageGallery/index.html">Image Gallery</a></li>
+          <li><a href="javascript-projects/16-toastNotification/index.html">Toast Notification</a></li>
+          <li><a href="javascript-projects/17-popup/index.html">Popup</a></li>
+          <li><a href="javascript-projects/18-clockApp/index.html">Clock App</a></li>
+          <li><a href="javascript-projects/19-passwordStrength/index.html">Password Strength Checker</a></li>
+          <li><a href="javascript-projects/20-translatorApp/index.html">Translator App</a></li>
+          <li><a href="javascript-projects/21-progressBar/index.html">Progress Bar</a></li>
+          <li><a href="javascript-projects/22-timer/index.html">Timer</a></li>
+          <li><a href="javascript-projects/23-drag&drop/index.html">Drag & Drop</a></li>
+          <li><a href="javascript-projects/24-imageSearch/index.html">Image Search</a></li>
+          <li><a href="javascript-projects/25-cryptoWallet/index.html">Crypto Wallet</a></li>
+          <li><a href="javascript-projects/26-endlessRunner/index.html">Endless Runner</a></li>
+          <li><a href="javascript-projects/27-tictactoe/index.html">Tic Tac Toe</a></li>
+          <li><a href="javascript-projects/28-dictionary/index.html">Dictionary</a></li>
+          <li><a href="javascript-projects/29-currencyConvertor/index.html">Currency Converter</a></li>
+          <li><a href="javascript-projects/30-loanCalculator/index.html">Loan Calculator</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
